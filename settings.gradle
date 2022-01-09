@@ -1,9 +1,23 @@
+import org.gradle.api.initialization.resolve.RepositoriesMode
+
+// previous resolution management but didn't allow setting of repos in project gradle
+
+//dependencyResolutionManagement {
+//    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+//    repositories {
+//        google()
+//        mavenCentral()
+//        jcenter() // Warning: this repository is going to shut down soon
+//    }
+//}
+
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
     repositories {
         google()
         mavenCentral()
         jcenter() // Warning: this repository is going to shut down soon
+        maven { url 'https://jitpack.io' }  // added here to support jitpack, and needed for publishing sdk
     }
 }
 rootProject.name = "AndroidSdkTutorial"
