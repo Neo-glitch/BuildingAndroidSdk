@@ -3,7 +3,7 @@ dummy app to learn how to build, use and deploy an android sdk
 
 ## How to use the dummy Sdk ##
 
-Add the dependency in your projects build.gradle file
+Add the dependency in your `project's build.gradle` file
 
 ```
   allprojects{
@@ -14,7 +14,7 @@ Add the dependency in your projects build.gradle file
   }
 ```
 
-Add this dependency in your apps build.gradle file
+Add this dependency in your `app's build.gradle` file
 
 ```
 {
